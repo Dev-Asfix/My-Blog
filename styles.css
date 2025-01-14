@@ -54,6 +54,7 @@ nav{
     font-weight: 600;
     color: var(--white-color);
 }
+
 .menu{
     display: flex;
     align-items: center;
@@ -63,6 +64,10 @@ nav{
     color:var(--white-color);
     font-size: 1.2rem;
     font-weight: 500;
+}
+.menu li a::after{
+    content: '';
+    position: absolute ;
 }
 button{
     width: 150px;
