@@ -4,8 +4,9 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'poppins';
+    font-family: 'Poppins';
     scroll-behavior: smooth;
+    margin: 0;
 }
 :root{
     --prime-color:#55c175;
@@ -19,6 +20,16 @@
 body{
     background-color: var(--body-color);
     color: var(--white-color)
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 8%;
+
+}
+img{
+    
 }
 nav{
     display: flex;
@@ -108,4 +119,104 @@ button:hover{
 }
 button:hover i{
     transform: rotate(180deg);
+}
+
+
+/* Hero SECTION*/ 
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 8%;
+}
+.content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+}
+.content h2{
+    font-size: 4rem;
+    color : var(--second-color);
+    font-weight: 600;
+    line-height: 4.3rem;
+}
+.content h1{
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 6.5rem;
+}
+.content h3{
+    font-size: 2.5rem;
+    color : var(--prime-color);
+    font-weight: 600;
+    line-height: 3.3rem;
+}
+.content p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 80%;
+    margin: 20px 0;
+}
+.content button{
+    margin: 10px 0;
+}
+
+.iamge{
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+}
+.iamge img{
+    border-radius: 100%;
+    object-fit: contain;
+}
+.det_box{
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 220px;
+    /*    height: 50px;*/
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.det_box i{
+    font-size: 3rem;
+    color: var(--prime-color);
+}
+.det_box_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.element{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 30px !important;
+    background-color: var(--white-color);
+    padding: 15px;
+}
+.elem1{
+    top: 10%;
+    left: 10%;
+}
+.elem2{
+    top: 10%;
+    right: 10%;
+}
+.elem3{
+    top: 75%;
+    right: 10%;
 }
