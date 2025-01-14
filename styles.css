@@ -63,11 +63,26 @@ nav{
 .menu li a{
     color:var(--white-color);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
+    position: relative;
+    transition: .3s;
 }
-.menu li a::after{
+.menu li a:after{
     content: '';
     position: absolute ;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--prime-color);
+    transition: .3s;
+
+}
+.menu li:hover a:after{
+    width: 100%;
+}
+.menu li:hover a{
+    color:var(--prime-color);
 }
 button{
     width: 150px;
