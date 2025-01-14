@@ -19,7 +19,8 @@
 }
 body{
     background-color: var(--body-color);
-    color: var(--white-color)
+    color: var(--white-color);
+    overflow-x: hidden;
 }
 section{
     display: flex;
@@ -129,6 +130,7 @@ button:hover i{
     justify-content: space-between;
     align-items: center;
     padding: 5% 8%;
+    position: relative;
 }
 .content{
     width: 60%;
@@ -219,4 +221,44 @@ button:hover i{
 .elem3{
     top: 75%;
     right: 10%;
+}
+.shape1{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 30%;
+    z-index: -1;
+}
+.shape2{
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 70%;
+    z-index: -1;
+}
+.shape3{
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 800px;
+    height: 800px;
+    z-index: -1;
+}
+.shape4{
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    opacity: 0.7;
+    width: 800px;
+    height: 800px;
+    z-index: -1;
+}
+.shape5{
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    opacity: 0.7;
+    width: 800px;
+    height: 800px;
+    z-index: -1;
 }
