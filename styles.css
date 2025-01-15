@@ -129,8 +129,9 @@ button:hover i{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 8%;
+    padding: 5.6% 8%;
     position: relative;
+    overflow: hidden;
 }
 .content{
     width: 60%;
@@ -202,6 +203,10 @@ button:hover i{
     align-items: flex-start;
     gap: 5px;
 }
+.det_box_info h2{
+    font-weight: 500;
+
+}
 .element{
     width: 100px;
     height: 100px;
@@ -261,4 +266,160 @@ button:hover i{
     width: 800px;
     height: 800px;
     z-index: -1;
+}
+
+/*MY ADVANTAGE SECTION*/
+
+.my_advantage{
+    width: 100%;
+    justify-content: space-between;
+    padding: 8%;
+}
+.advantage_exp{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.advantage_exp{
+    background: linear-gradient(180deg, #2e2c1f, #1b1b19);
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+}
+.exp_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 25%;
+
+}
+.exp_box h1{
+    font-size: 8rem;
+    font-weight: 500;
+    color: var(--second-color);
+}
+.exp_box p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.exp_small_box{
+    width: 350px;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+    top:35%;
+    left: 20%;
+}
+.exp_small_box::after{
+    border-radius: 5px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #939393, rgba(28, 26  , 26,.3));
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+}
+.exp_small_box::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    background-color: #2d2b1f;
+    z-index: -1;
+}
+.exp_small_box h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color:var(--prime-color);
+}
+.exp_small_box p{
+    font-weight: 500;
+}
+.advantage_content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.advantage_content h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.advantage_content p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 80%;
+}
+
+.adventage_cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.adventage_card{
+    width: 300px;
+    /*height: 300px;*/
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    z-index: 2;
+}
+.adventage_card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 230, 0, .6), rgba(31, 30, 28, .6) 67.59%);
+    z-index: -2;
+
+}
+.adventage_card::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 95%;
+    border-radius: 10px;
+    background: #1f1e1d;
+    z-index: -1;
+
+}
+.adventage_card h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.adventage_card p{
+    font-size: 1rem;
+    font-weight: 400;
 }
