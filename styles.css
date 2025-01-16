@@ -274,6 +274,9 @@ button:hover i{
     width: 100%;
     justify-content: space-between;
     padding: 8%;
+    position: relative;
+    overflow: hidden;
+
 }
 .advantage_exp{
     width: 40%;
@@ -478,4 +481,65 @@ button:hover i{
 }
 .adventage_card:nth-child(6):hover h2{
     color:  #AD08CC;
+}
+
+.adv_shape{
+    position: absolute;
+    z-index: -1;
+}
+.adv_shape1{
+    top: 10%;
+    left: -10%;
+    width: 40%;
+}
+.adv_shape2{
+    top: 10%;
+    right: 0%;
+    width: 40%;
+}
+.adv_shape3{
+    bottom: -20%;
+    left: 0%;
+    width: 42%;
+    opacity: 0.6;
+}
+.adv_shape4{
+    top: -20%;
+    right: -10%;
+    width: 40%;
+    opacity: 0.7;
+}
+
+
+/* SERVICES SECTION*/
+
+.services{
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+.service_shape{
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 40%;
+    opacity: 0.7;
+    z-index: -1;
+}
+.service_shape2{
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 40%;
+    opacity: 0.7;
+    z-index: -1;
+}
+.headings{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
