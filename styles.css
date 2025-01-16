@@ -517,14 +517,15 @@ button:hover i{
     position: relative;
     flex-direction: column;
     overflow: hidden;
+    background-color: #222121;
 }
 .service_shape{
     position: absolute;
-    top: 0;
+    top: 15%;
     right: -10%;
     width: 40%;
     opacity: 0.7;
-    z-index: -1;
+   
 }
 .service_shape2{
     position: absolute;
@@ -532,7 +533,7 @@ button:hover i{
     left: -10%;
     width: 40%;
     opacity: 0.7;
-    z-index: -1;
+    
 }
 .headings{
     width: 60%;
@@ -656,6 +657,7 @@ button:hover i{
 .work_experience{
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 .work_box_container{
     display: flex;
@@ -716,4 +718,13 @@ button:hover i{
 }
 .work_box:hover{
     border: 1px solid rgba(131,131,131,0.5);
+}
+.work_shape{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    opacity: 0.6;
+    z-index: -1;
 }
