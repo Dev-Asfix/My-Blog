@@ -660,6 +660,7 @@ button:hover i{
     position: relative;
 }
 .work_box_container{
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -727,4 +728,161 @@ button:hover i{
     width: 40%;
     opacity: 0.6;
     z-index: -1;
+}
+
+/* RECENT WORK SECTION*/
+
+.recent_work{
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding: 5% 12%;
+    
+}
+.heading2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:10px;
+}
+.head_content h1{
+    font-size: 5rem;
+    font-weight: 500;
+}
+.head_content p{
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.heading2 i{
+    font-size: 3.5rem;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: #373737;
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    position: relative;
+}
+.heading2 i:hover{
+    background-color: var(--second-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+.heading2 i:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 105%;
+    border: 2px dashed rgba(131,131,131, 0.5);
+    border-radius: 100%;
+}
+.RecentWorkSwiper{
+    width: 100%;
+    margin-top: 50px;
+}
+.slide{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+/* Estilo del contenedor para permitir posicionamiento relativo */
+.recent_work {
+    position: relative; /* Necesario para que los botones sean relativos a esta sección */
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5% 12%;
+  }
+  
+
+
+
+.slide_img{
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+.slide:hover .slide_img{
+    transform: scale(1.07);
+}
+.slide_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 20px;
+}
+.slide_content h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.slide_content h2:hover{
+    color: var(--prime-color);
+    cursor: pointer;
+}
+.slide_content p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #999;
+}
+.recent_work_shape{
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.swiper-button-next:after , .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after , .swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+.swiper_btn{
+    position: absolute !important;
+    top: 96% !important;
+    left: 45% !important;
+}
+.swiper_btn_right{
+    left: 50% !important;
+}
+.swiper_btn i{
+    width: 100px;
+    font-size: 2rem;
+    color: var(--prime-color);
+    height: 50px;
+    padding: 10%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--prime-color);
+    transition: .2s;
+}
+.swiper_btn i:hover{
+    background-color: var(--prime-color);
+    color: var(--white-color);
 }
