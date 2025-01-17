@@ -1317,3 +1317,17 @@ button:hover i{
     right: 5%;
     font-size: 2rem;
 }
+
+/* COPYRIGHT SECTION*/
+.copyright{
+    padding: 1% 8%;
+}
+.copyright p{
+    text-align: center;
+    font-weight: 300;
+}
+.copyright p span{
+    color: var(--prime-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
