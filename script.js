@@ -32,6 +32,24 @@ var swiper = new Swiper('.RecentWorkSwiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
+    breakpoints: {
+        1400: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    },
 });
 
 var swiper = new Swiper('.testimonialSwiper', {
@@ -67,4 +85,11 @@ testImg4.addEventListener('click', () => {
 });
 testImg5.addEventListener('click', () => {
     mainImg.src = 'images/work-6.jpg';
+});
+
+let bar = document.querySelector('.bars');
+let menu = document.querySelector('.menu');
+
+bar.addEventListener('click', () => {
+    menu.classList.toggle('show_menu');
 });
