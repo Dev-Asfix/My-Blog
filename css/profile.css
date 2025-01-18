@@ -6,7 +6,7 @@
 	position: relative;
 	width: 500px;
 	height: 500px;
-	perspective: 1000px;
+	perspective: 10000px;
 	overflow: hidden;
 	border-radius: 100%;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -27,7 +27,7 @@
 
 .parallax-layer img {
 	height: 140%;
-	margin-left: -30%;
+	margin-left: -40%;
 }
 
 .bg {

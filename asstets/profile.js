@@ -3,7 +3,7 @@ const layers = document.querySelectorAll(".parallax-layer");
 let isHovered = false;
 
 function applyParallaxEffect(x, y) {
-    const tiltY = (x - 0.5) * 60;
+    const tiltY = (x - 0.5) * 30;
     layers.forEach((layer, index) => {
         const depthX = index * 30;
         const depthY = index * 13;

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="width: 100%; height: 100%; position: absolute;">
+  <defs>
+    <!-- Degradados -->
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d1ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0033cc" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cuadrados exteriores (sin relleno) -->
+  <g fill="none" stroke-width="1.5" opacity="0.7">
+    <rect x="200" y="150" width="400" height="400" stroke="url(#gradient1)" transform="rotate(15, 400, 350)" />
+    <rect x="250" y="200" width="300" height="300" stroke="url(#gradient2)" transform="rotate(-10, 400, 350)" />
+  </g>
+
+  <!-- Cuadrados interiores (rellenados) -->
+  <g fill="url(#gradient1)" opacity="0.5" stroke="none">
+    <rect x="300" y="250" width="200" height="200" transform="rotate(5, 400, 350)" />
+  </g>
+
+  <!-- Cuadrados pequeños con bordes y relleno -->
+  <g fill="url(#gradient2)" opacity="0.7" stroke="url(#gradient1)" stroke-width="0.8">
+    <rect x="340" y="290" width="120" height="120" transform="rotate(0, 400, 350)" />
+  </g>
+</svg>
