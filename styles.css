@@ -39,21 +39,21 @@ nav{
 }
 
 .bars{
+    display: none;
     width: 50px;
     height: 50px;
+    background-color: var(--prime-color);
+    color: var(--white-color);
+    font-size: 2rem;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--prime-color);
-    color: var(--white-color);
-    font-size: 2rem;
-    cursor:pointer;
-    transition: .3s;
-    display: none;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 .bars:hover{
-    transform: scale(0.8);
+    transform: scale(1.1);
 }
 .logo{
     cursor: pointer;
@@ -165,15 +165,193 @@ button:hover i{
     margin: 10px 0;
 }
 
-.iamge{
+
+
+/* PRofile IMG */
+/* Contenedor de la imagen */
+.iamge {
     width: 30%;
-    overflow: hidden;
+    height: 500px;
     position: relative;
+    overflow: visible;
+    margin: 100px auto;
+    border-radius: 50%;
+    animation: entrance 1s ease-out forwards;
 }
-.iamge img{
-    border-radius: 100%;
-    object-fit: contain;
+
+/* Imagen principal circular */
+#img-ff {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    animation: glowEffect 3s ease-in-out infinite;
 }
+
+.element{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50px !important;
+}
+/* Estilo para las imágenes flotantes */
+.iamge .element img {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Posicionamiento de las imágenes flotantes */
+.iamge .element.elem1 {
+    top: 20%;
+    left: -10%;
+    transform: translateX(-50%);
+    animation: rotateAround 5s linear infinite, neonEffect 1s ease-in-out infinite, bounce 2s ease-in-out infinite;
+}
+
+.iamge .element.elem2 {
+    top: 50%;
+    left: 90%;
+    transform: translateY(-50%);
+    animation: rotateAround 6s linear infinite, neonEffect 1s ease-in-out infinite, bounce 2s ease-in-out infinite;
+}
+
+.iamge .element.elem3 {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateAround 7s linear infinite, neonEffect 1s ease-in-out infinite, bounce 2s ease-in-out infinite;
+}
+
+.iamge .element.elem4 {
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+    animation: rotateAround 8s linear infinite, neonEffect 1s ease-in-out infinite, bounce 2s ease-in-out infinite;
+}
+
+.iamge .element.elem5 {
+    top: 10%;
+    left: 90%;
+    transform: translateY(-50%);
+    animation: rotateAround 9s linear infinite, neonEffect 1s ease-in-out infinite, bounce 2s ease-in-out infinite;
+}
+
+/* Animación de movimiento circular */
+@keyframes rotateAround {
+    0% {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+/* Animación de rebote para las imágenes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Efecto neon */
+@keyframes neonEffect {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    }
+}
+
+/* Animación de entrada */
+@keyframes entrance {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Efecto de resplandor tipo lava */
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+}
+
+/* Efecto de hover */
+.iamge .element img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.8);
+}
+
+.iamge .element img {
+    position: absolute;
+    width: 70px; /* O cualquier otro valor específico */
+    height: 70px;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Efecto Neon */
+    transition: transform 0.1s ease, box-shadow 0.3s ease; /* Suaviza el efecto de hover */
+    animation: bounce 2s ease-in-out infinite; /* Animación de rebote */
+}
+
+
+#img-ff:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.8);
+}
+
+#img-ff {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+}
+
+
+
+
+
+
+/*NEON MOVIMIENTO ----------------------------------- */
+#fluid {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+  }
+  
+
+
+
+
+
+
+
 .det_box{
     position: absolute;
     top: 70%;
@@ -203,26 +381,6 @@ button:hover i{
 .det_box_info h2{
     font-weight: 500;
 
-}
-.element{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    border-radius: 30px !important;
-    background-color: var(--white-color);
-    padding: 15px;
-}
-.elem1{
-    top: 10%;
-    left: 10%;
-}
-.elem2{
-    top: 10%;
-    right: 10%;
-}
-.elem3{
-    top: 75%;
-    right: 10%;
 }
 .shape1{
     position: absolute;
@@ -1464,24 +1622,36 @@ button:hover i{
 }
 
 @media(max-width:900px){
+    
+    .iamge{
+        margin-top: 100px;
+        width: 400;
+    }
     .bars{
         display: flex;
     }
-    nav{
-        position: absolute;
-
+    nav {
+        z-index: 1000; /* Mantén el nav siempre al frente */
+        position: relative; /* Necesario para evitar conflictos de posicionamiento */
+    }
+    .shape1, .shape2, .shape3, .shape4, .shape5 {
+        z-index: -1; /* Envía las formas detrás del contenido */
     }
     .menu{
-         position: absolute;
+        z-index: 999; /* Asegúrate de que esté al frente del contenido */
+        position: absolute;
         top: 90px;
-        left: -100%;
-        flex-direction: column;
+        left: 0;
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         height: calc(100vh - 90px);
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         opacity: 0;
+        pointer-events: none; /* Por defecto, no permite clics */
+        transition: opacity 0.3s, left 0.3s;
 
     }
     .menu li{
@@ -1490,10 +1660,11 @@ button:hover i{
     .menu li a{
         font-size: 1.6rem;
     }
-    .menu.show_menu{
-        left: 0;
+    .menu.show_menu {
         opacity: 1;
+        pointer-events: auto; /* Activa los clics cuando está visible */
     }
+    
     .adv_shape3{
         width: 100%;
     }
@@ -1651,5 +1822,5 @@ button:hover i{
     }
 }
 #img-ff{
-    width: 500px;
+    width: 100%;
 }
